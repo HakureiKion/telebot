@@ -137,10 +137,8 @@ class WebhookHandler(webapp2.RequestHandler):
                 reply('Hello! Please send me the text you want to convert into Serif.')
             else:
                 logging.info('not enabled for chat_id {}'.format(chat_id))
-            for i in range(len(text)):
-                count=0
-                while count<len(rep1):
-                    text = text.replace(rep[count], rep2[text.find(rep[count])],1)
+            for i in range(len(rep1)):
+                text = text.replace(rep1[i],rep2[i],1)
             reply(text)
             
 app = webapp2.WSGIApplication([
