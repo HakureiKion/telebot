@@ -139,7 +139,7 @@ class WebhookHandler(webapp2.RequestHandler):
                 logging.info('not enabled for chat_id {}'.format(chat_id))
             for i in range(len(text)):
                 count=0
-                while count<len(rep1)
+                while count<len(rep1):
                     text = text.replace(rep[count], rep2[text.find(rep[count])],1)
             reply(text)
             
